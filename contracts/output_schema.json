@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Message Ingestion Output Schema",
+  "description": "Schema for API response",
+  "type": "object",
+  "required": ["status"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "Response status",
+      "enum": ["success", "error"]
+    },
+    "reply": {
+      "type": "string",
+      "description": "Generated reply message (only present on success)"
+    },
+    "message": {
+      "type": "string",
+      "description": "Error message (only present on error)"
+    },
+    "code": {
+      "type": "integer",
+      "description": "Error code (only present on error)"
+    }
+  }
+}

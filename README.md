@@ -1,8 +1,65 @@
-# Scam Detection Engine
+# Agentic Honeypot for Scam Detection & Intelligence Extraction
 
-A fully self-contained, stateless scam detection module for the "Agentic Honeypot for Scam Detection & Intelligence Extraction" system. This engine analyzes messages to detect scam intent using rule-based pattern matching and progressive confidence scoring.
+A production-ready backend system for defensive cybersecurity research featuring:
+- **API Gateway & Orchestration** - REST endpoints with session management
+- **Scam Detection Engine** - Rule-based pattern matching with confidence scoring
+- **Intelligence Extraction** - Entity extraction and behavior analysis
+- **GUVI Callback Integration** - Automated reporting to evaluation endpoints
 
-## 🎯 Purpose
+---
+
+## 🚀 Quick Start
+
+### Run the Complete System
+
+```bash
+# Windows
+start.bat
+
+# Linux/Mac
+chmod +x start.sh
+./start.sh
+```
+
+Or manually:
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
+
+**API Available at:** `http://localhost:5000`
+
+### Test the System
+
+```bash
+python integration_test.py
+```
+
+---
+
+## 📖 Documentation
+
+- **[INTEGRATION_GUIDE.md](INTEGRATION_GUIDE.md)** - Complete API documentation, architecture, and usage
+- **[QUICKSTART.md](QUICKSTART.md)** - Quick reference for scam detector module
+- **[DELIVERABLE_STATUS.md](DELIVERABLE_STATUS.md)** - Implementation status
+
+---
+
+## 🎯 Core Components
+
+### 1. API Gateway (`api-gateway/`)
+REST API with session orchestration, authentication, and state management.
+
+**Endpoints:**
+- `POST /ingest-message` - Process incoming scam messages
+- `GET /health` - Health check
+- `GET /sessions` - List active sessions
+
+### 2. Scam Detection Engine (Core)
+Rule-based detection with progressive confidence scoring.
+
+**Files:** `detector.py`, `signals.py`, `rules.py`, `scorer.py`
 
 Given an incoming message (with optional conversation history), this engine:
 - **Detects scam signals** across multiple categories
@@ -10,6 +67,18 @@ Given an incoming message (with optional conversation history), this engine:
 - **Returns explainable results** for downstream AI agent activation
 
 **Key Rule**: `scamDetected = true` when `confidence >= 0.7`
+
+### 3. Intelligence Engine (`intelligence-engine/`)
+Extracts entities, analyzes behavior, and reports findings.
+
+**Capabilities:**
+- UPI IDs, bank accounts, phone numbers, URLs
+- Suspicious keyword detection
+- Behavior summary generation
+- Confidence-weighted filtering
+
+### 4. Integration Bridge (`bridge.py`)
+Connects all components with clean interfaces.
 
 ---
 

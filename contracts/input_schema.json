@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Message Ingestion Input Schema",
+  "description": "Schema for incoming message ingestion requests",
+  "type": "object",
+  "required": ["sessionId", "message"],
+  "properties": {
+    "sessionId": {
+      "type": "string",
+      "description": "Unique session identifier",
+      "minLength": 1
+    },
+    "message": {
+      "type": "object",
+      "required": ["sender", "text"],
+      "properties": {
+        "sender": {
+          "type": "string",
+          "description": "Message sender identifier",
+          "enum": ["scammer", "honeypot", "user"]
+        },
+        "text": {
+          "type": "string",
+          "description": "Message text content",
+          "minLength": 1
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp"
+        }
+      }
+    },
+    "conversationHistory": {
+      "type": "array",
+      "description": "Previous messages in conversation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sender": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      },
+      "default": []
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional context metadata",
+      "properties": {
+        "channel": {
+          "type": "string",
+          "description": "Communication channel",
+          "enum": ["SMS", "Email", "WhatsApp", "Call", "Social Media", "Other"]
+        },
+        "language": {
+          "type": "string",
+          "description": "Message language",
+          "default": "English"
+        },
+        "locale": {
+          "type": "string",
+          "description": "Geographic locale",
+          "default": "IN"
+        }
+      }
+    }
+  }
+}

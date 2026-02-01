@@ -1,0 +1,456 @@
+2026-01-31 20:26:05,850 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 20:26:06,260 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 20:26:06,261 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 20:26:06,677 - session_manager - INFO - SessionManager initialized
+2026-01-31 20:26:53,084 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 20:26:53,489 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 20:26:53,490 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 20:26:53,881 - session_manager - INFO - SessionManager initialized
+2026-01-31 20:28:21,800 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 20:28:22,183 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 20:28:22,184 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 20:28:22,597 - session_manager - INFO - SessionManager initialized
+2026-01-31 20:28:22,605 - __main__ - INFO - ============================================================
+2026-01-31 20:28:22,606 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-01-31 20:28:22,606 - __main__ - INFO - ============================================================
+2026-01-31 20:28:22,610 - __main__ - INFO - Initializing system components...
+2026-01-31 20:28:22,613 - bridge - INFO - ScamDetectorBridge initialized
+2026-01-31 20:28:22,732 - bridge - INFO - AgentInterface initialized (mock mode)
+2026-01-31 20:28:22,738 - router - INFO - RequestRouter initialized
+2026-01-31 20:28:22,741 - main - INFO - API Gateway initialized
+2026-01-31 20:28:22,745 - __main__ - INFO - 
+2026-01-31 20:28:22,745 - __main__ - INFO - System Configuration:
+2026-01-31 20:28:22,746 - __main__ - INFO -   Host: 0.0.0.0
+2026-01-31 20:28:22,746 - __main__ - INFO -   Port: 5000
+2026-01-31 20:28:22,746 - __main__ - INFO -   Debug: False
+2026-01-31 20:28:22,747 - __main__ - INFO - 
+2026-01-31 20:28:22,747 - __main__ - INFO - API Endpoints:
+2026-01-31 20:28:22,747 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-01-31 20:28:22,748 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-01-31 20:28:22,748 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-01-31 20:28:22,748 - __main__ - INFO - 
+2026-01-31 20:28:22,749 - __main__ - INFO - Authentication:
+2026-01-31 20:28:22,749 - __main__ - INFO -   Header: x-api-key
+2026-01-31 20:28:22,749 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-01-31 20:28:22,750 - __main__ - INFO - 
+2026-01-31 20:28:22,750 - __main__ - INFO - ============================================================
+2026-01-31 20:28:22,750 - __main__ - INFO - System ready! Starting Flask server...
+2026-01-31 20:28:22,751 - __main__ - INFO - ============================================================
+2026-01-31 20:28:22,751 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-01-31 20:28:22,844 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.68.6:5000
+2026-01-31 20:28:22,845 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 20:28:34,738 - werkzeug - INFO - 10.7.68.6 - - [31/Jan/2026 20:28:34] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 20:28:35,150 - werkzeug - INFO - 10.7.68.6 - - [31/Jan/2026 20:28:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-31 20:28:45,329 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 20:28:45] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 20:28:45,703 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 20:28:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-31 20:32:06,326 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 20:32:06] "GET /health HTTP/1.1" 200 -
+2026-01-31 20:32:14,594 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 20:32:14] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 20:32:31,035 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 20:32:31] "[31m[1mGET /sessions HTTP/1.1[0m" 401 -
+2026-01-31 21:35:44,541 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 21:35:44,956 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 21:35:44,956 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 21:35:45,404 - session_manager - INFO - SessionManager initialized
+2026-01-31 21:35:45,406 - __main__ - INFO - ============================================================
+2026-01-31 21:35:45,407 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-01-31 21:35:45,407 - __main__ - INFO - ============================================================
+2026-01-31 21:35:45,407 - __main__ - INFO - Initializing system components...
+2026-01-31 21:35:45,408 - bridge - INFO - ScamDetectorBridge initialized
+2026-01-31 21:35:45,408 - __main__ - INFO - [OK] Scam Detector Bridge initialized
+2026-01-31 21:35:45,408 - __main__ - INFO - [OK] Intelligence Engine initialized
+2026-01-31 21:35:45,409 - bridge - INFO - AgentInterface initialized (mock mode)
+2026-01-31 21:35:45,410 - __main__ - INFO - [OK] Agent Interface initialized
+2026-01-31 21:35:45,413 - router - INFO - RequestRouter initialized
+2026-01-31 21:35:45,416 - main - INFO - API Gateway initialized
+2026-01-31 21:35:45,416 - __main__ - INFO - [OK] API Gateway initialized
+2026-01-31 21:35:45,417 - __main__ - INFO - 
+2026-01-31 21:35:45,417 - __main__ - INFO - System Configuration:
+2026-01-31 21:35:45,418 - __main__ - INFO -   Host: 0.0.0.0
+2026-01-31 21:35:45,419 - __main__ - INFO -   Port: 5000
+2026-01-31 21:35:45,419 - __main__ - INFO -   Debug: False
+2026-01-31 21:35:45,419 - __main__ - INFO - 
+2026-01-31 21:35:45,420 - __main__ - INFO - API Endpoints:
+2026-01-31 21:35:45,420 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-01-31 21:35:45,420 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-01-31 21:35:45,421 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-01-31 21:35:45,421 - __main__ - INFO - 
+2026-01-31 21:35:45,421 - __main__ - INFO - Authentication:
+2026-01-31 21:35:45,421 - __main__ - INFO -   Header: x-api-key
+2026-01-31 21:35:45,422 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-01-31 21:35:45,422 - __main__ - INFO - 
+2026-01-31 21:35:45,423 - __main__ - INFO - ============================================================
+2026-01-31 21:35:45,423 - __main__ - INFO - System ready! Starting Flask server...
+2026-01-31 21:35:45,424 - __main__ - INFO - ============================================================
+2026-01-31 21:35:45,424 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-01-31 21:35:45,480 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.68.6:5000
+2026-01-31 21:35:45,481 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 21:35:50,450 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:35:50] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 21:37:19,442 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:37:19] "GET /health HTTP/1.1" 200 -
+2026-01-31 21:37:19,743 - router - INFO - [demo-session-001] Processing message from scammer
+2026-01-31 21:37:19,744 - session_manager - INFO - Creating new session: demo-session-001
+2026-01-31 21:37:19,745 - router - INFO - [demo-session-001] Scam detection: {'is_scam': True, 'confidence': 0.75, 'signals': ['upi_request', 'payment_request', 'suspicious_link', 'repetition', 'copy_paste'], 'explanation': {'upi_request': 'UPI and payment ID requests', 'payment_request': 'General payment requests', 'suspicious_link': 'URLs and link requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 21:37:19,746 - session_manager - INFO - [Session demo-session-001] State transition: INIT -> SUSPECTED
+2026-01-31 21:37:19,746 - session_manager - INFO - [Session demo-session-001] State transition: SUSPECTED -> ENGAGING
+2026-01-31 21:37:19,747 - extractor - INFO - [demo-session-001] Intelligence extraction complete: True
+2026-01-31 21:37:19,748 - router - INFO - [demo-session-001] Intelligence extraction: True
+2026-01-31 21:37:19,748 - session_manager - INFO - [Session demo-session-001] State transition: ENGAGING -> INTEL_COMPLETE
+2026-01-31 21:37:19,749 - reporter - INFO - [demo-session-001] Final report generated
+2026-01-31 21:37:19,749 - guvi_callback - INFO - [demo-session-001] Sending final callback to https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 21:37:20,690 - guvi_callback - INFO - [demo-session-001] Callback successful: 200
+2026-01-31 21:37:20,695 - extractor - INFO - [demo-session-001] Intelligence data cleared
+2026-01-31 21:37:20,696 - session_manager - INFO - [Session demo-session-001] State transition: INTEL_COMPLETE -> REPORTED
+2026-01-31 21:37:20,696 - router - INFO - [demo-session-001] Final callback sent successfully
+2026-01-31 21:37:20,697 - main - INFO - [demo-session-001] Message processed successfully
+2026-01-31 21:37:20,697 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:37:20] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 21:37:20,766 - main - WARNING - Authentication failed
+2026-01-31 21:37:20,766 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:37:20] "[31m[1mPOST /ingest-message HTTP/1.1[0m" 401 -
+2026-01-31 21:37:20,797 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:37:20] "GET /sessions HTTP/1.1" 200 -
+2026-01-31 21:38:39,521 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 21:38:39] "GET /health HTTP/1.1" 200 -
+2026-01-31 21:59:40,801 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 21:59:41,197 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 21:59:41,198 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 21:59:41,575 - session_manager - INFO - SessionManager initialized
+2026-01-31 21:59:41,578 - __main__ - INFO - ============================================================
+2026-01-31 21:59:41,578 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-01-31 21:59:41,579 - __main__ - INFO - ============================================================
+2026-01-31 21:59:41,579 - __main__ - INFO - Initializing system components...
+2026-01-31 21:59:41,579 - bridge - INFO - ScamDetectorBridge initialized
+2026-01-31 21:59:41,580 - __main__ - INFO - [OK] Scam Detector Bridge initialized
+2026-01-31 21:59:41,580 - __main__ - INFO - [OK] Intelligence Engine initialized
+2026-01-31 21:59:41,580 - bridge - INFO - AgentInterface initialized with persona-based agent engine
+2026-01-31 21:59:41,581 - __main__ - INFO - [OK] Agent Interface initialized
+2026-01-31 21:59:41,583 - router - INFO - RequestRouter initialized
+2026-01-31 21:59:41,586 - main - INFO - API Gateway initialized
+2026-01-31 21:59:41,586 - __main__ - INFO - [OK] API Gateway initialized
+2026-01-31 21:59:41,586 - __main__ - INFO - 
+2026-01-31 21:59:41,587 - __main__ - INFO - System Configuration:
+2026-01-31 21:59:41,587 - __main__ - INFO -   Host: 0.0.0.0
+2026-01-31 21:59:41,587 - __main__ - INFO -   Port: 5000
+2026-01-31 21:59:41,588 - __main__ - INFO -   Debug: False
+2026-01-31 21:59:41,588 - __main__ - INFO - 
+2026-01-31 21:59:41,588 - __main__ - INFO - API Endpoints:
+2026-01-31 21:59:41,588 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-01-31 21:59:41,589 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-01-31 21:59:41,589 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-01-31 21:59:41,589 - __main__ - INFO - 
+2026-01-31 21:59:41,590 - __main__ - INFO - Authentication:
+2026-01-31 21:59:41,590 - __main__ - INFO -   Header: x-api-key
+2026-01-31 21:59:41,636 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-01-31 21:59:41,637 - __main__ - INFO - 
+2026-01-31 21:59:41,637 - __main__ - INFO - ============================================================
+2026-01-31 21:59:41,638 - __main__ - INFO - System ready! Starting Flask server...
+2026-01-31 21:59:41,638 - __main__ - INFO - ============================================================
+2026-01-31 21:59:41,639 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-01-31 21:59:41,683 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.68.6:5000
+2026-01-31 21:59:41,683 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 22:00:28,132 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:00:28] "GET /health HTTP/1.1" 200 -
+2026-01-31 22:00:28,288 - router - INFO - [demo-realistic-220028] Processing message from scammer
+2026-01-31 22:00:28,289 - session_manager - INFO - Creating new session: demo-realistic-220028
+2026-01-31 22:00:28,290 - router - INFO - [demo-realistic-220028] Scam detection: {'is_scam': False, 'confidence': 0.67, 'signals': ['time_pressure', 'account_threat', 'account_suspension', 'bank_impersonation', 'repetition', 'copy_paste'], 'explanation': {'time_pressure': 'Time-based pressure', 'account_threat': 'Account threat keywords', 'account_suspension': 'Account suspension patterns', 'bank_impersonation': 'Bank impersonation', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:00:28,292 - bridge - INFO - [demo-realistic-220028] Agent reply generated using persona: anxious_student
+2026-01-31 22:00:28,292 - main - INFO - [demo-realistic-220028] Message processed successfully
+2026-01-31 22:00:28,293 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:00:28] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:00:30,319 - router - INFO - [demo-realistic-220028] Processing message from scammer
+2026-01-31 22:00:30,321 - router - INFO - [demo-realistic-220028] Scam detection: {'is_scam': False, 'confidence': 0.48, 'signals': ['urgency', 'repetition', 'copy_paste'], 'explanation': {'urgency': 'General urgency keywords', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:00:30,321 - bridge - INFO - [demo-realistic-220028] Agent reply generated using persona: anxious_student
+2026-01-31 22:00:30,322 - main - INFO - [demo-realistic-220028] Message processed successfully
+2026-01-31 22:00:30,322 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:00:30] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:00:32,351 - router - INFO - [demo-realistic-220028] Processing message from scammer
+2026-01-31 22:00:32,352 - router - INFO - [demo-realistic-220028] Scam detection: {'is_scam': True, 'confidence': 0.75, 'signals': ['bank_impersonation', 'suspicious_link', 'shortened_url', 'repetition', 'copy_paste'], 'explanation': {'bank_impersonation': 'Bank impersonation', 'suspicious_link': 'URLs and link requests', 'shortened_url': 'Shortened URL patterns', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:00:32,353 - session_manager - INFO - [Session demo-realistic-220028] State transition: INIT -> SUSPECTED
+2026-01-31 22:00:32,353 - session_manager - INFO - [Session demo-realistic-220028] State transition: SUSPECTED -> ENGAGING
+2026-01-31 22:00:32,353 - bridge - INFO - [demo-realistic-220028] Agent reply generated using persona: anxious_student
+2026-01-31 22:00:32,354 - extractor - INFO - [demo-realistic-220028] Intelligence extraction complete: False
+2026-01-31 22:00:32,355 - router - INFO - [demo-realistic-220028] Intelligence extraction: False
+2026-01-31 22:00:32,355 - main - INFO - [demo-realistic-220028] Message processed successfully
+2026-01-31 22:00:32,356 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:00:32] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:00:34,371 - router - INFO - [demo-realistic-220028] Processing message from scammer
+2026-01-31 22:00:34,372 - router - INFO - [demo-realistic-220028] Scam detection: {'is_scam': True, 'confidence': 0.73, 'signals': ['upi_request', 'repetition', 'copy_paste'], 'explanation': {'upi_request': 'UPI and payment ID requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:00:34,372 - bridge - INFO - [demo-realistic-220028] Agent reply generated using persona: anxious_student
+2026-01-31 22:00:34,373 - extractor - INFO - [demo-realistic-220028] Intelligence extraction complete: False
+2026-01-31 22:00:34,373 - router - INFO - [demo-realistic-220028] Intelligence extraction: False
+2026-01-31 22:00:34,374 - main - INFO - [demo-realistic-220028] Message processed successfully
+2026-01-31 22:00:34,374 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:00:34] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:19:06,184 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 22:19:06,580 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 22:19:06,581 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 22:19:06,975 - session_manager - INFO - SessionManager initialized
+2026-01-31 22:19:06,977 - __main__ - INFO - ============================================================
+2026-01-31 22:19:06,978 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-01-31 22:19:06,978 - __main__ - INFO - ============================================================
+2026-01-31 22:19:06,979 - __main__ - INFO - Initializing system components...
+2026-01-31 22:19:06,979 - bridge - INFO - ScamDetectorBridge initialized
+2026-01-31 22:19:06,979 - __main__ - INFO - [OK] Scam Detector Bridge initialized
+2026-01-31 22:19:06,980 - __main__ - INFO - [OK] Intelligence Engine initialized
+2026-01-31 22:19:06,980 - bridge - INFO - AgentInterface initialized with persona-based agent engine
+2026-01-31 22:19:06,980 - __main__ - INFO - [OK] Agent Interface initialized
+2026-01-31 22:19:06,985 - router - INFO - RequestRouter initialized
+2026-01-31 22:19:06,991 - main - INFO - API Gateway initialized
+2026-01-31 22:19:06,992 - __main__ - INFO - [OK] API Gateway initialized
+2026-01-31 22:19:06,993 - __main__ - INFO - 
+2026-01-31 22:19:06,993 - __main__ - INFO - System Configuration:
+2026-01-31 22:19:06,994 - __main__ - INFO -   Host: 0.0.0.0
+2026-01-31 22:19:06,994 - __main__ - INFO -   Port: 5000
+2026-01-31 22:19:06,995 - __main__ - INFO -   Debug: False
+2026-01-31 22:19:06,996 - __main__ - INFO - 
+2026-01-31 22:19:06,997 - __main__ - INFO - API Endpoints:
+2026-01-31 22:19:06,998 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-01-31 22:19:06,998 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-01-31 22:19:06,999 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-01-31 22:19:07,000 - __main__ - INFO - 
+2026-01-31 22:19:07,001 - __main__ - INFO - Authentication:
+2026-01-31 22:19:07,002 - __main__ - INFO -   Header: x-api-key
+2026-01-31 22:19:07,003 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-01-31 22:19:07,004 - __main__ - INFO - 
+2026-01-31 22:19:07,004 - __main__ - INFO - ============================================================
+2026-01-31 22:19:07,005 - __main__ - INFO - System ready! Starting Flask server...
+2026-01-31 22:19:07,005 - __main__ - INFO - ============================================================
+2026-01-31 22:19:07,005 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-01-31 22:19:07,056 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.68.6:5000
+2026-01-31 22:19:07,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 22:19:10,902 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:10] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 22:19:52,257 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:52] "GET /health HTTP/1.1" 200 -
+2026-01-31 22:19:52,289 - router - INFO - [demo-realistic-221952] Processing message from scammer
+2026-01-31 22:19:52,290 - session_manager - INFO - Creating new session: demo-realistic-221952
+2026-01-31 22:19:52,291 - router - INFO - [demo-realistic-221952] Scam detection: {'is_scam': False, 'confidence': 0.67, 'signals': ['time_pressure', 'account_threat', 'account_suspension', 'bank_impersonation', 'repetition', 'copy_paste'], 'explanation': {'time_pressure': 'Time-based pressure', 'account_threat': 'Account threat keywords', 'account_suspension': 'Account suspension patterns', 'bank_impersonation': 'Bank impersonation', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:19:52,291 - bridge - INFO - [demo-realistic-221952] Agent reply generated using persona: cautious_bank_customer
+2026-01-31 22:19:52,292 - main - INFO - [demo-realistic-221952] Message processed successfully
+2026-01-31 22:19:52,292 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:52] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:19:54,322 - router - INFO - [demo-realistic-221952] Processing message from scammer
+2026-01-31 22:19:54,323 - router - INFO - [demo-realistic-221952] Scam detection: {'is_scam': False, 'confidence': 0.48, 'signals': ['urgency', 'repetition', 'copy_paste'], 'explanation': {'urgency': 'General urgency keywords', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:19:54,324 - bridge - INFO - [demo-realistic-221952] Agent reply generated using persona: cautious_bank_customer
+2026-01-31 22:19:54,325 - main - INFO - [demo-realistic-221952] Message processed successfully
+2026-01-31 22:19:54,326 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:54] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:19:56,351 - router - INFO - [demo-realistic-221952] Processing message from scammer
+2026-01-31 22:19:56,352 - router - INFO - [demo-realistic-221952] Scam detection: {'is_scam': True, 'confidence': 0.75, 'signals': ['bank_impersonation', 'suspicious_link', 'shortened_url', 'repetition', 'copy_paste'], 'explanation': {'bank_impersonation': 'Bank impersonation', 'suspicious_link': 'URLs and link requests', 'shortened_url': 'Shortened URL patterns', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:19:56,353 - session_manager - INFO - [Session demo-realistic-221952] State transition: INIT -> SUSPECTED
+2026-01-31 22:19:56,353 - session_manager - INFO - [Session demo-realistic-221952] State transition: SUSPECTED -> ENGAGING
+2026-01-31 22:19:56,353 - bridge - INFO - [demo-realistic-221952] Agent reply generated using persona: cautious_bank_customer
+2026-01-31 22:19:56,354 - extractor - INFO - [demo-realistic-221952] Intelligence extraction complete: False
+2026-01-31 22:19:56,355 - router - INFO - [demo-realistic-221952] Intelligence extraction: False
+2026-01-31 22:19:56,355 - main - INFO - [demo-realistic-221952] Message processed successfully
+2026-01-31 22:19:56,356 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:56] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:19:58,386 - router - INFO - [demo-realistic-221952] Processing message from scammer
+2026-01-31 22:19:58,387 - router - INFO - [demo-realistic-221952] Scam detection: {'is_scam': True, 'confidence': 0.73, 'signals': ['upi_request', 'repetition', 'copy_paste'], 'explanation': {'upi_request': 'UPI and payment ID requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:19:58,388 - bridge - INFO - [demo-realistic-221952] Agent reply generated using persona: cautious_bank_customer
+2026-01-31 22:19:58,389 - extractor - INFO - [demo-realistic-221952] Intelligence extraction complete: False
+2026-01-31 22:19:58,389 - router - INFO - [demo-realistic-221952] Intelligence extraction: False
+2026-01-31 22:19:58,389 - main - INFO - [demo-realistic-221952] Message processed successfully
+2026-01-31 22:19:58,391 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:19:58] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:22:37,227 - extractor - INFO - IntelligenceExtractor initialized
+2026-01-31 22:22:37,644 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-01-31 22:22:37,645 - reporter - INFO - IntelligenceReporter initialized
+2026-01-31 22:22:38,043 - session_manager - INFO - SessionManager initialized
+2026-01-31 22:22:38,046 - __main__ - INFO - ============================================================
+2026-01-31 22:22:38,046 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-01-31 22:22:38,046 - __main__ - INFO - ============================================================
+2026-01-31 22:22:38,047 - __main__ - INFO - Initializing system components...
+2026-01-31 22:22:38,047 - bridge - INFO - ScamDetectorBridge initialized
+2026-01-31 22:22:38,048 - __main__ - INFO - [OK] Scam Detector Bridge initialized
+2026-01-31 22:22:38,048 - __main__ - INFO - [OK] Intelligence Engine initialized
+2026-01-31 22:22:38,048 - bridge - INFO - AgentInterface initialized with persona-based agent engine
+2026-01-31 22:22:38,049 - __main__ - INFO - [OK] Agent Interface initialized
+2026-01-31 22:22:38,053 - router - INFO - RequestRouter initialized
+2026-01-31 22:22:38,056 - main - INFO - API Gateway initialized
+2026-01-31 22:22:38,057 - __main__ - INFO - [OK] API Gateway initialized
+2026-01-31 22:22:38,057 - __main__ - INFO - 
+2026-01-31 22:22:38,058 - __main__ - INFO - System Configuration:
+2026-01-31 22:22:38,058 - __main__ - INFO -   Host: 0.0.0.0
+2026-01-31 22:22:38,059 - __main__ - INFO -   Port: 5000
+2026-01-31 22:22:38,059 - __main__ - INFO -   Debug: False
+2026-01-31 22:22:38,059 - __main__ - INFO - 
+2026-01-31 22:22:38,060 - __main__ - INFO - API Endpoints:
+2026-01-31 22:22:38,060 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-01-31 22:22:38,060 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-01-31 22:22:38,061 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-01-31 22:22:38,061 - __main__ - INFO - 
+2026-01-31 22:22:38,061 - __main__ - INFO - Authentication:
+2026-01-31 22:22:38,061 - __main__ - INFO -   Header: x-api-key
+2026-01-31 22:22:38,062 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-01-31 22:22:38,062 - __main__ - INFO - 
+2026-01-31 22:22:38,062 - __main__ - INFO - ============================================================
+2026-01-31 22:22:38,063 - __main__ - INFO - System ready! Starting Flask server...
+2026-01-31 22:22:38,063 - __main__ - INFO - ============================================================
+2026-01-31 22:22:38,063 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-01-31 22:22:38,122 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.68.6:5000
+2026-01-31 22:22:38,122 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 22:22:53,055 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:22:53] "GET /health HTTP/1.1" 200 -
+2026-01-31 22:22:53,207 - router - INFO - [demo-realistic-222253] Processing message from scammer
+2026-01-31 22:22:53,208 - session_manager - INFO - Creating new session: demo-realistic-222253
+2026-01-31 22:22:53,209 - router - INFO - [demo-realistic-222253] Scam detection: {'is_scam': False, 'confidence': 0.67, 'signals': ['time_pressure', 'account_threat', 'account_suspension', 'bank_impersonation', 'repetition', 'copy_paste'], 'explanation': {'time_pressure': 'Time-based pressure', 'account_threat': 'Account threat keywords', 'account_suspension': 'Account suspension patterns', 'bank_impersonation': 'Bank impersonation', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:22:53,210 - bridge - INFO - [demo-realistic-222253] Agent reply generated using persona: anxious_student
+2026-01-31 22:22:53,210 - main - INFO - [demo-realistic-222253] Message processed successfully
+2026-01-31 22:22:53,211 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:22:53] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:22:55,301 - router - INFO - [demo-realistic-222253] Processing message from scammer
+2026-01-31 22:22:55,302 - router - INFO - [demo-realistic-222253] Scam detection: {'is_scam': False, 'confidence': 0.48, 'signals': ['urgency', 'repetition', 'copy_paste'], 'explanation': {'urgency': 'General urgency keywords', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:22:55,302 - bridge - INFO - [demo-realistic-222253] Agent reply generated using persona: anxious_student
+2026-01-31 22:22:55,303 - main - INFO - [demo-realistic-222253] Message processed successfully
+2026-01-31 22:22:55,304 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:22:55] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:22:57,330 - router - INFO - [demo-realistic-222253] Processing message from scammer
+2026-01-31 22:22:57,331 - router - INFO - [demo-realistic-222253] Scam detection: {'is_scam': True, 'confidence': 0.75, 'signals': ['bank_impersonation', 'suspicious_link', 'shortened_url', 'repetition', 'copy_paste'], 'explanation': {'bank_impersonation': 'Bank impersonation', 'suspicious_link': 'URLs and link requests', 'shortened_url': 'Shortened URL patterns', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:22:57,331 - session_manager - INFO - [Session demo-realistic-222253] State transition: INIT -> SUSPECTED
+2026-01-31 22:22:57,332 - session_manager - INFO - [Session demo-realistic-222253] State transition: SUSPECTED -> ENGAGING
+2026-01-31 22:22:57,332 - bridge - INFO - [demo-realistic-222253] Agent reply generated using persona: anxious_student
+2026-01-31 22:22:57,333 - extractor - INFO - [demo-realistic-222253] Intelligence extraction complete: False
+2026-01-31 22:22:57,334 - router - INFO - [demo-realistic-222253] Intelligence extraction: False
+2026-01-31 22:22:57,334 - main - INFO - [demo-realistic-222253] Message processed successfully
+2026-01-31 22:22:57,335 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:22:57] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:22:59,356 - router - INFO - [demo-realistic-222253] Processing message from scammer
+2026-01-31 22:22:59,357 - router - INFO - [demo-realistic-222253] Scam detection: {'is_scam': True, 'confidence': 0.73, 'signals': ['upi_request', 'repetition', 'copy_paste'], 'explanation': {'upi_request': 'UPI and payment ID requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-01-31 22:22:59,358 - bridge - INFO - [demo-realistic-222253] Agent reply generated using persona: anxious_student
+2026-01-31 22:22:59,358 - extractor - INFO - [demo-realistic-222253] Intelligence extraction complete: False
+2026-01-31 22:22:59,359 - router - INFO - [demo-realistic-222253] Intelligence extraction: False
+2026-01-31 22:22:59,359 - main - INFO - [demo-realistic-222253] Message processed successfully
+2026-01-31 22:22:59,359 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:22:59] "POST /ingest-message HTTP/1.1" 200 -
+2026-01-31 22:23:05,737 - werkzeug - INFO - 10.7.68.6 - - [31/Jan/2026 22:23:05] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-31 22:23:16,341 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 22:23:16] "GET /health HTTP/1.1" 200 -
+2026-02-01 21:06:02,698 - extractor - INFO - IntelligenceExtractor initialized
+2026-02-01 21:06:03,027 - guvi_callback - INFO - GUVICallback initialized with URL: https://hackathon.guvi.in/api/updateHoneyPotFinalResult
+2026-02-01 21:06:03,027 - reporter - INFO - IntelligenceReporter initialized
+2026-02-01 21:06:03,324 - session_manager - INFO - SessionManager initialized
+2026-02-01 21:06:03,326 - __main__ - INFO - ============================================================
+2026-02-01 21:06:03,326 - __main__ - INFO - Starting Agentic Honeypot for Scam Detection System
+2026-02-01 21:06:03,326 - __main__ - INFO - ============================================================
+2026-02-01 21:06:03,327 - __main__ - INFO - Initializing system components...
+2026-02-01 21:06:03,327 - bridge - INFO - ScamDetectorBridge initialized
+2026-02-01 21:06:03,327 - __main__ - INFO - [OK] Scam Detector Bridge initialized
+2026-02-01 21:06:03,328 - __main__ - INFO - [OK] Intelligence Engine initialized
+2026-02-01 21:06:03,328 - bridge - INFO - AgentInterface initialized with persona-based agent engine
+2026-02-01 21:06:03,328 - __main__ - INFO - [OK] Agent Interface initialized
+2026-02-01 21:06:03,331 - router - INFO - RequestRouter initialized
+2026-02-01 21:06:03,333 - main - INFO - API Gateway initialized
+2026-02-01 21:06:03,333 - __main__ - INFO - [OK] API Gateway initialized
+2026-02-01 21:06:03,334 - __main__ - INFO - 
+2026-02-01 21:06:03,334 - __main__ - INFO - System Configuration:
+2026-02-01 21:06:03,334 - __main__ - INFO -   Host: 0.0.0.0
+2026-02-01 21:06:03,334 - __main__ - INFO -   Port: 5000
+2026-02-01 21:06:03,335 - __main__ - INFO -   Debug: False
+2026-02-01 21:06:03,335 - __main__ - INFO - 
+2026-02-01 21:06:03,335 - __main__ - INFO - API Endpoints:
+2026-02-01 21:06:03,335 - __main__ - INFO -   POST http://0.0.0.0:5000/ingest-message
+2026-02-01 21:06:03,336 - __main__ - INFO -   GET  http://0.0.0.0:5000/health
+2026-02-01 21:06:03,336 - __main__ - INFO -   GET  http://0.0.0.0:5000/sessions
+2026-02-01 21:06:03,336 - __main__ - INFO - 
+2026-02-01 21:06:03,336 - __main__ - INFO - Authentication:
+2026-02-01 21:06:03,337 - __main__ - INFO -   Header: x-api-key
+2026-02-01 21:06:03,337 - __main__ - INFO -   Valid keys: test-key-123, guvi-honeypot-key
+2026-02-01 21:06:03,337 - __main__ - INFO - 
+2026-02-01 21:06:03,337 - __main__ - INFO - ============================================================
+2026-02-01 21:06:03,338 - __main__ - INFO - System ready! Starting Flask server...
+2026-02-01 21:06:03,338 - __main__ - INFO - ============================================================
+2026-02-01 21:06:03,338 - main - INFO - Starting API Gateway on 0.0.0.0:5000
+2026-02-01 21:06:03,399 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.22:5000
+2026-02-01 21:06:03,399 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-01 21:06:06,928 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:06:06] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-01 21:06:07,190 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:06:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-01 21:06:34,504 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:06:34] "GET /health HTTP/1.1" 200 -
+2026-02-01 21:06:48,497 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:06:48] "[31m[1mGET /sessions HTTP/1.1[0m" 401 -
+2026-02-01 21:07:08,430 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:07:08] "[31m[1mGET /sessions HTTP/1.1[0m" 401 -
+2026-02-01 21:07:58,281 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:07:58] "GET /sessions HTTP/1.1" 200 -
+2026-02-01 21:08:17,046 - router - INFO - [test-001] Processing message from scammer
+2026-02-01 21:08:17,047 - session_manager - INFO - Creating new session: test-001
+2026-02-01 21:08:17,048 - router - INFO - [test-001] Scam detection: {'is_scam': True, 'confidence': 0.96, 'signals': ['account_threat', 'account_suspension', 'upi_request', 'repetition', 'copy_paste'], 'explanation': {'account_threat': 'Account threat keywords', 'account_suspension': 'Account suspension patterns', 'upi_request': 'UPI and payment ID requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:08:17,048 - session_manager - INFO - [Session test-001] State transition: INIT -> SUSPECTED
+2026-02-01 21:08:17,049 - session_manager - INFO - [Session test-001] State transition: SUSPECTED -> ENGAGING
+2026-02-01 21:08:17,050 - bridge - INFO - [test-001] Agent reply generated using persona: busy_employee
+2026-02-01 21:08:17,050 - extractor - INFO - [test-001] Intelligence extraction complete: False
+2026-02-01 21:08:17,050 - router - INFO - [test-001] Intelligence extraction: False
+2026-02-01 21:08:17,051 - main - INFO - [test-001] Message processed successfully
+2026-02-01 21:08:17,051 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:08:17] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:08:17,113 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:08:17] "GET /sessions HTTP/1.1" 200 -
+2026-02-01 21:12:47,868 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "GET /health HTTP/1.1" 200 -
+2026-02-01 21:12:47,875 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "[31m[1mGET /sessions HTTP/1.1[0m" 401 -
+2026-02-01 21:12:47,880 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "GET /sessions HTTP/1.1" 200 -
+2026-02-01 21:12:47,904 - router - INFO - [eval-test-001] Processing message from scammer
+2026-02-01 21:12:47,905 - session_manager - INFO - Creating new session: eval-test-001
+2026-02-01 21:12:47,906 - router - INFO - [eval-test-001] Scam detection: {'is_scam': True, 'confidence': 0.99, 'signals': ['urgency', 'account_threat', 'account_suspension', 'bank_impersonation', 'upi_request', 'payment_request', 'repetition', 'copy_paste'], 'explanation': {'urgency': 'General urgency keywords', 'account_threat': 'Account threat keywords', 'account_suspension': 'Account suspension patterns', 'bank_impersonation': 'Bank impersonation', 'upi_request': 'UPI and payment ID requests', 'payment_request': 'General payment requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:47,906 - session_manager - INFO - [Session eval-test-001] State transition: INIT -> SUSPECTED
+2026-02-01 21:12:47,906 - session_manager - INFO - [Session eval-test-001] State transition: SUSPECTED -> ENGAGING
+2026-02-01 21:12:47,907 - bridge - INFO - [eval-test-001] Agent reply generated using persona: anxious_student
+2026-02-01 21:12:47,907 - extractor - INFO - [eval-test-001] Intelligence extraction complete: False
+2026-02-01 21:12:47,908 - router - INFO - [eval-test-001] Intelligence extraction: False
+2026-02-01 21:12:47,908 - main - INFO - [eval-test-001] Message processed successfully
+2026-02-01 21:12:47,909 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:47,921 - router - INFO - [eval-test-002] Processing message from scammer
+2026-02-01 21:12:47,921 - session_manager - INFO - Creating new session: eval-test-002
+2026-02-01 21:12:47,922 - router - INFO - [eval-test-002] Scam detection: {'is_scam': False, 'confidence': 0.6, 'signals': ['kyc_failure', 'suspicious_link', 'repetition', 'copy_paste'], 'explanation': {'kyc_failure': 'KYC-related threats', 'suspicious_link': 'URLs and link requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:47,922 - bridge - INFO - [eval-test-002] Agent reply generated using persona: cautious_bank_customer
+2026-02-01 21:12:47,923 - main - INFO - [eval-test-002] Message processed successfully
+2026-02-01 21:12:47,923 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:47,929 - router - INFO - [eval-test-003] Processing message from scammer
+2026-02-01 21:12:47,929 - session_manager - INFO - Creating new session: eval-test-003
+2026-02-01 21:12:47,930 - router - INFO - [eval-test-003] Scam detection: {'is_scam': False, 'confidence': 0.51, 'signals': ['time_pressure', 'bank_impersonation', 'repetition', 'copy_paste'], 'explanation': {'time_pressure': 'Time-based pressure', 'bank_impersonation': 'Bank impersonation', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:47,931 - bridge - INFO - [eval-test-003] Agent reply generated using persona: cautious_bank_customer
+2026-02-01 21:12:47,931 - main - INFO - [eval-test-003] Message processed successfully
+2026-02-01 21:12:47,931 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:47,955 - router - INFO - [eval-test-multiturn] Processing message from scammer
+2026-02-01 21:12:47,956 - session_manager - INFO - Creating new session: eval-test-multiturn
+2026-02-01 21:12:47,956 - router - INFO - [eval-test-multiturn] Scam detection: {'is_scam': False, 'confidence': 0.57, 'signals': ['account_suspension', 'repetition', 'copy_paste'], 'explanation': {'account_suspension': 'Account suspension patterns', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:47,957 - bridge - INFO - [eval-test-multiturn] Agent reply generated using persona: busy_employee
+2026-02-01 21:12:47,957 - main - INFO - [eval-test-multiturn] Message processed successfully
+2026-02-01 21:12:47,958 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:47,970 - router - INFO - [eval-test-multiturn] Processing message from scammer
+2026-02-01 21:12:47,972 - router - INFO - [eval-test-multiturn] Scam detection: {'is_scam': True, 'confidence': 0.73, 'signals': ['upi_request', 'repetition', 'copy_paste'], 'explanation': {'upi_request': 'UPI and payment ID requests', 'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:47,972 - session_manager - INFO - [Session eval-test-multiturn] State transition: INIT -> SUSPECTED
+2026-02-01 21:12:47,972 - session_manager - INFO - [Session eval-test-multiturn] State transition: SUSPECTED -> ENGAGING
+2026-02-01 21:12:47,973 - bridge - INFO - [eval-test-multiturn] Agent reply generated using persona: busy_employee
+2026-02-01 21:12:47,973 - extractor - INFO - [eval-test-multiturn] Intelligence extraction complete: False
+2026-02-01 21:12:47,973 - router - INFO - [eval-test-multiturn] Intelligence extraction: False
+2026-02-01 21:12:47,974 - main - INFO - [eval-test-multiturn] Message processed successfully
+2026-02-01 21:12:47,974 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:47] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,005 - router - INFO - [eval-test-multiturn] Processing message from scammer
+2026-02-01 21:12:48,006 - router - INFO - [eval-test-multiturn] Scam detection: {'is_scam': False, 'confidence': 0.21, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,006 - bridge - INFO - [eval-test-multiturn] Agent reply generated using persona: busy_employee
+2026-02-01 21:12:48,007 - extractor - INFO - [eval-test-multiturn] Intelligence extraction complete: False
+2026-02-01 21:12:48,007 - router - INFO - [eval-test-multiturn] Intelligence extraction: False
+2026-02-01 21:12:48,007 - main - INFO - [eval-test-multiturn] Message processed successfully
+2026-02-01 21:12:48,008 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,038 - main - WARNING - Validation failed: Missing sessionId
+2026-02-01 21:12:48,039 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "[31m[1mPOST /ingest-message HTTP/1.1[0m" 400 -
+2026-02-01 21:12:48,064 - router - INFO - [concurrent-0] Processing message from scammer
+2026-02-01 21:12:48,065 - session_manager - INFO - Creating new session: concurrent-0
+2026-02-01 21:12:48,065 - router - INFO - [concurrent-0] Scam detection: {'is_scam': False, 'confidence': 0.18, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,066 - bridge - INFO - [concurrent-0] Agent reply generated using persona: cautious_bank_customer
+2026-02-01 21:12:48,066 - main - INFO - [concurrent-0] Message processed successfully
+2026-02-01 21:12:48,067 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,067 - router - INFO - [concurrent-1] Processing message from scammer
+2026-02-01 21:12:48,068 - router - INFO - [concurrent-3] Processing message from scammer
+2026-02-01 21:12:48,069 - session_manager - INFO - Creating new session: concurrent-1
+2026-02-01 21:12:48,069 - session_manager - INFO - Creating new session: concurrent-3
+2026-02-01 21:12:48,070 - router - INFO - [concurrent-1] Scam detection: {'is_scam': False, 'confidence': 0.18, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,070 - router - INFO - [concurrent-4] Processing message from scammer
+2026-02-01 21:12:48,072 - router - INFO - [concurrent-3] Scam detection: {'is_scam': False, 'confidence': 0.18, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,072 - bridge - INFO - [concurrent-1] Agent reply generated using persona: anxious_student
+2026-02-01 21:12:48,073 - session_manager - INFO - Creating new session: concurrent-4
+2026-02-01 21:12:48,073 - bridge - INFO - [concurrent-3] Agent reply generated using persona: cautious_bank_customer
+2026-02-01 21:12:48,073 - main - INFO - [concurrent-1] Message processed successfully
+2026-02-01 21:12:48,074 - router - INFO - [concurrent-4] Scam detection: {'is_scam': False, 'confidence': 0.18, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,074 - main - INFO - [concurrent-3] Message processed successfully
+2026-02-01 21:12:48,075 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,075 - bridge - INFO - [concurrent-4] Agent reply generated using persona: cautious_bank_customer
+2026-02-01 21:12:48,076 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,076 - main - INFO - [concurrent-4] Message processed successfully
+2026-02-01 21:12:48,077 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -
+2026-02-01 21:12:48,089 - router - INFO - [concurrent-2] Processing message from scammer
+2026-02-01 21:12:48,090 - session_manager - INFO - Creating new session: concurrent-2
+2026-02-01 21:12:48,090 - router - INFO - [concurrent-2] Scam detection: {'is_scam': False, 'confidence': 0.18, 'signals': ['repetition', 'copy_paste'], 'explanation': {'repetition': 'Scammer is repeating similar messages', 'copy_paste': 'Exact message repetition detected'}}
+2026-02-01 21:12:48,091 - bridge - INFO - [concurrent-2] Agent reply generated using persona: anxious_student
+2026-02-01 21:12:48,091 - main - INFO - [concurrent-2] Message processed successfully
+2026-02-01 21:12:48,092 - werkzeug - INFO - 127.0.0.1 - - [01/Feb/2026 21:12:48] "POST /ingest-message HTTP/1.1" 200 -

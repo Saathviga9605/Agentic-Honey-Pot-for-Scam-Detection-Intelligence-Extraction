@@ -77,32 +77,35 @@ class RequestRouter:
         # Step 3: Generate reply (with timeout handling)
         reply = self._generate_reply(session, message)
         
-        # Step 4: Extract intelligence
-        intel_result = {}
-        extracted_entities = {}
-        behavior_summary = ""
-
-        if session.scam_detected:
-            intel_result = self._extract_intelligence(session)
-
-            # Pull the full extracted intelligence from the engine
-            session_intel = self.intelligence_engine.get_session_intelligence(session_id)
-            extracted_entities = session_intel.get("entities", {
-    "bank_accounts": [],
-    "ifsc_codes": [],
-    "phone_numbers": [],
-    "upi_ids": [],
-    "phishing_links": []
-})
-            behavior_summary = session_intel.get("behavior_summary", "")
-            
-            # Check if intelligence collection is complete
-            if intel_result.get("complete", False):
-                session.transition_to(SessionState.INTEL_COMPLETE)
-                session.intelligence_ready = True
-                
-                # Trigger final callback
-                self._trigger_final_callback(session)
+        # Step 4: Extract intelligence (ALWAYS, not just when scam detected)
+        # FIXED: Intelligence extraction should happen regardless of scam detection
+        # to capture entities even from low-confidence messages
+        intel_result = self._extract_intelligence(session)
+        
+        # Pull the full extracted intelligence from the engine
+        session_intel = self.intelligence_engine.get_session_intelligence(session_id)
+        
+        # Get entities with proper structure
+        raw_entities = session_intel.get("entities", {})
+        if raw_entities and any(raw_entities.values()):  # Check if any arrays have data
+            extracted_entities = raw_entities
+        else:
+            # Ensure consistent structure even when empty
+            extracted_entities = {
+                "bank_accounts": [],
+                "ifsc_codes": [],
+                "phone_numbers": [],
+                "upi_ids": [],
+                "phishing_links": []
+            }
+        
+        behavior_summary = session_intel.get("behavior_summary", "")
+        
+        # Only trigger callback if scam was detected AND intelligence is complete
+        if session.scam_detected and intel_result.get("complete", False):
+            session.transition_to(SessionState.INTEL_COMPLETE)
+            session.intelligence_ready = True
+            self._trigger_final_callback(session)
         
         # Build the full response
         response = {
@@ -125,7 +128,7 @@ class RequestRouter:
             }
         }
 
-        logger.info(f"[{session_id}] Response built: scamDetected={scam_result.get('is_scam', False)}, confidence={scam_result.get('confidence', 0.0)}")
+        logger.info(f"[{session_id}] Response built: scamDetected={scam_result.get('is_scam', False)}, confidence={scam_result.get('confidence', 0.0)}, entities_found={sum(len(v) for v in extracted_entities.values())}")
         return response
     
     def _detect_scam(self, text: str, session) -> Dict[str, Any]:

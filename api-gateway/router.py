@@ -40,7 +40,7 @@ class RequestRouter:
             payload: Incoming message payload
             
         Returns:
-            Response with reply message
+            Response with reply message, scam detection results, and extracted intelligence
         """
         session_id = payload.get("sessionId")
         message = payload.get("message", {})
@@ -78,8 +78,17 @@ class RequestRouter:
         reply = self._generate_reply(session, message)
         
         # Step 4: Extract intelligence
+        intel_result = {}
+        extracted_entities = {}
+        behavior_summary = ""
+
         if session.scam_detected:
             intel_result = self._extract_intelligence(session)
+
+            # Pull the full extracted intelligence from the engine
+            session_intel = self.intelligence_engine.get_session_intelligence(session_id)
+            extracted_entities = session_intel.get("entities", {})
+            behavior_summary = session_intel.get("behavior_summary", "")
             
             # Check if intelligence collection is complete
             if intel_result.get("complete", False):
@@ -89,10 +98,29 @@ class RequestRouter:
                 # Trigger final callback
                 self._trigger_final_callback(session)
         
-        return {
+        # Build the full response
+        response = {
             "status": "success",
-            "reply": reply
+            "reply": reply,
+            "scam_detection": {
+                "scamDetected": scam_result.get("is_scam", False),
+                "confidence": scam_result.get("confidence", 0.0),
+                "signals": scam_result.get("signals", [])
+            },
+            "intelligence": {
+                "entities": extracted_entities,
+                "behavior_summary": behavior_summary,
+                "collection_complete": intel_result.get("complete", False)
+            },
+            "session": {
+                "sessionId": session_id,
+                "state": session.state.name,
+                "message_count": session.message_count
+            }
         }
+
+        logger.info(f"[{session_id}] Response built: scamDetected={scam_result.get('is_scam', False)}, confidence={scam_result.get('confidence', 0.0)}")
+        return response
     
     def _detect_scam(self, text: str, session) -> Dict[str, Any]:
         """
@@ -117,7 +145,7 @@ class RequestRouter:
             return result
         except Exception as e:
             logger.error(f"Scam detection error: {e}")
-            return {"is_scam": False, "confidence": 0}
+            return {"is_scam": False, "confidence": 0, "signals": []}
     
     def _generate_reply(self, session, incoming_message: Dict) -> str:
         """

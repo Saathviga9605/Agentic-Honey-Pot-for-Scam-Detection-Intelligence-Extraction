@@ -11,7 +11,8 @@ from patterns import COMPILED_PATTERNS, get_keyword_categories
 logger = logging.getLogger(__name__)
 
 # Minimum occurrences for confidence-weighted intelligence
-MIN_OCCURRENCE_THRESHOLD = 2
+# Set to 1 so entities are captured on first occurrence
+MIN_OCCURRENCE_THRESHOLD = 1
 
 
 class IntelligenceExtractor:
@@ -128,18 +129,10 @@ class IntelligenceExtractor:
             matches = pattern.findall(text)
             entities["ifsc_codes"].extend(matches)
         
-        # Apply confidence-weighted filtering (only entities appearing 2+ times)
+        # Deduplicate entities
         filtered_entities = {}
         for key, values in entities.items():
-            if values:
-                # Count occurrences
-                counter = Counter(values)
-                # Filter by threshold
-                filtered = [entity for entity, count in counter.items() 
-                           if count >= MIN_OCCURRENCE_THRESHOLD]
-                filtered_entities[key] = list(set(filtered))  # Deduplicate
-            else:
-                filtered_entities[key] = []
+            filtered_entities[key] = list(set(values)) if values else []
         
         return filtered_entities
     

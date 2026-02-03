@@ -87,7 +87,13 @@ class RequestRouter:
 
             # Pull the full extracted intelligence from the engine
             session_intel = self.intelligence_engine.get_session_intelligence(session_id)
-            extracted_entities = session_intel.get("entities", {})
+            extracted_entities = session_intel.get("entities", {
+    "bank_accounts": [],
+    "ifsc_codes": [],
+    "phone_numbers": [],
+    "upi_ids": [],
+    "phishing_links": []
+})
             behavior_summary = session_intel.get("behavior_summary", "")
             
             # Check if intelligence collection is complete

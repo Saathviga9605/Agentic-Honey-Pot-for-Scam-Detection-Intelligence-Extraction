@@ -32,6 +32,18 @@ class IntelligenceReporter:
         """
         return self.extractor.analyze_conversation(conversation_history, session_id)
     
+    def get_session_intelligence(self, session_id: str) -> Dict[str, Any]:
+        """
+        Get stored intelligence for a session
+        
+        Args:
+            session_id: Session identifier
+            
+        Returns:
+            Intelligence data or empty dict
+        """
+        return self.extractor.get_session_intelligence(session_id)
+    
     def generate_final_report(self, session_id: str) -> Dict[str, Any]:
         """
         Generate final intelligence report for session

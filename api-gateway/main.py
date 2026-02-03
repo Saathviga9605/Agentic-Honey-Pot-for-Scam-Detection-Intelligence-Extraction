@@ -36,6 +36,44 @@ class APIGateway:
     
     def _register_routes(self):
         """Register all API routes"""
+
+        @self.app.route('/', methods=['GET'])
+        def index():
+            """Root endpoint - API info page"""
+            return jsonify({
+                "name": "Agentic Honeypot for Scam Detection & Intelligence Extraction",
+                "version": "1.0.0",
+                "status": "running",
+                "description": "A production-ready backend system for defensive cybersecurity research featuring scam detection, intelligence extraction, and automated reporting.",
+                "endpoints": {
+                    "GET /": "API info (this page)",
+                    "GET /health": "Health check",
+                    "GET /sessions": "List active sessions (requires x-api-key header)",
+                    "POST /ingest-message": "Process incoming scam messages (requires x-api-key header)"
+                },
+                "authentication": {
+                    "header": "x-api-key",
+                    "note": "All endpoints except / and /health require a valid API key"
+                },
+                "example_request": {
+                    "url": "POST /ingest-message",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "x-api-key": "your-api-key"
+                    },
+                    "body": {
+                        "sessionId": "session-001",
+                        "message": {
+                            "sender": "scammer",
+                            "text": "Send your OTP immediately or your account will be blocked"
+                        },
+                        "conversationHistory": [],
+                        "metadata": {
+                            "channel": "SMS"
+                        }
+                    }
+                }
+            }), 200
         
         @self.app.route('/health', methods=['GET'])
         def health_check():

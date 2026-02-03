@@ -276,4 +276,3 @@ class IntelligenceExtractor:
 
 # Global instance
 intelligence_extractor = IntelligenceExtractor()
-print("")

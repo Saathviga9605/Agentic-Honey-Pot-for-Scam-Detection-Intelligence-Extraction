@@ -91,14 +91,15 @@ class IntelligenceExtractor:
             text: Text to analyze
             
         Returns:
-            Dictionary of extracted entities
+            Dictionary of extracted entities (always includes all entity types)
         """
+        # Initialize with all entity types to ensure consistent structure
         entities = {
-            "upi_ids": [],
             "bank_accounts": [],
+            "ifsc_codes": [],
             "phone_numbers": [],
-            "urls": [],
-            "ifsc_codes": []
+            "upi_ids": [],
+            "phishing_links": []  # Changed from "urls" to match expected schema
         }
         
         # Extract UPI IDs
@@ -119,20 +120,24 @@ class IntelligenceExtractor:
             matches = pattern.findall(text)
             entities["phone_numbers"].extend(matches)
         
-        # Extract URLs
+        # Extract URLs/Phishing Links
         for pattern in self.patterns.get("url", []):
             matches = pattern.findall(text)
-            entities["urls"].extend(matches)
+            entities["phishing_links"].extend(matches)
         
         # Extract IFSC codes
         for pattern in self.patterns.get("ifsc_code", []):
             matches = pattern.findall(text)
             entities["ifsc_codes"].extend(matches)
         
-        # Deduplicate entities
-        filtered_entities = {}
-        for key, values in entities.items():
-            filtered_entities[key] = list(set(values)) if values else []
+        # Deduplicate and ensure all keys exist (even if empty)
+        filtered_entities = {
+            "bank_accounts": list(set(entities["bank_accounts"])),
+            "ifsc_codes": list(set(entities["ifsc_codes"])),
+            "phone_numbers": list(set(entities["phone_numbers"])),
+            "upi_ids": list(set(entities["upi_ids"])),
+            "phishing_links": list(set(entities["phishing_links"]))
+        }
         
         return filtered_entities
     
@@ -193,7 +198,7 @@ class IntelligenceExtractor:
             tactics.append("credential harvesting")
         
         if not tactics:
-            return f"Suspicious conversation with {message_count} messages exchanged"
+            return ""  # Return empty string for non-scam messages
         
         tactics_str = ", ".join(tactics)
         return f"Scammer used {tactics_str} across {message_count} messages"
@@ -211,30 +216,41 @@ class IntelligenceExtractor:
             True if complete, False otherwise
         """
         # Intelligence is complete if:
-        # 1. At least 10 messages exchanged, OR
-        # 2. High-value entities found (UPI, bank account, URLs), OR
-        # 3. Multiple credential requests detected
+        # 1. UPI ID or Bank Account + IFSC extracted (payment details), OR
+        # 2. Multiple phishing links found (2+), OR
+        # 3. At least 10 messages exchanged with some entities
         
-        if message_count >= 10:
-            return True
-        
-        # Check for high-value entities
-        high_value_entities = (
-            len(entities.get("upi_ids", [])) > 0 or
-            len(entities.get("bank_accounts", [])) > 0 or
-            len(entities.get("urls", [])) > 0
+        # Check for complete payment details
+        has_upi = len(entities.get("upi_ids", [])) > 0
+        has_bank_details = (
+            len(entities.get("bank_accounts", [])) > 0 and 
+            len(entities.get("ifsc_codes", [])) > 0
         )
         
-        if high_value_entities:
+        if has_upi or has_bank_details:
+            logger.info(f"Intelligence complete: Payment details extracted (UPI: {has_upi}, Bank: {has_bank_details})")
             return True
         
-        # Check for credential harvesting attempts
+        # Check for multiple phishing links (strong indicator)
+        phishing_links = len(entities.get("phishing_links", []))
+        if phishing_links >= 2:
+            logger.info(f"Intelligence complete: {phishing_links} phishing links detected")
+            return True
+        
+        # Long conversation with some entities
+        total_entities = sum(len(v) for v in entities.values())
+        if message_count >= 10 and total_entities > 0:
+            logger.info(f"Intelligence complete: {message_count} messages with {total_entities} entities")
+            return True
+        
+        # Check for repeated credential harvesting attempts
         credential_keywords = [
             k for k in keywords 
             if k in self.keyword_categories.get("credential_request", [])
         ]
         
         if len(credential_keywords) >= 3:
+            logger.info(f"Intelligence complete: {len(credential_keywords)} credential requests detected")
             return True
         
         return False

@@ -25,9 +25,27 @@ PATTERNS = {
     ],
     
     "url": [
+        # Standard URLs
         r'https?://[^\s]+',
         r'www\.[^\s]+',
-        r'\b[a-zA-Z0-9-]+\.(com|net|org|in|co\.in)[^\s]*\b'
+        
+        # Domain patterns
+        r'\b[a-zA-Z0-9-]+\.(com|net|org|in|co\.in|xyz|tk|ml|ga|cf|gq|click|top|online|site|info|biz)[^\s]*\b',
+        
+        # URL shorteners (high risk)
+        r'\bbit\.ly/[^\s]+',
+        r'\btinyurl\.com/[^\s]+',
+        r'\bgoo\.gl/[^\s]+',
+        r'\bt\.co/[^\s]+',
+        r'\btiny\.cc/[^\s]+',
+        r'\bcutt\.ly/[^\s]+',
+        r'\bshorturl\.at/[^\s]+',
+        
+        # Suspicious patterns
+        r'\b[a-zA-Z0-9-]+\-verify[^\s]*\.(com|net|in)',
+        r'\b[a-zA-Z0-9-]+\-bank[^\s]*\.(com|net|in)',
+        r'\b[a-zA-Z0-9-]+\-secure[^\s]*\.(com|net|in)',
+        r'\b[a-zA-Z0-9-]+\-update[^\s]*\.(com|net|in)',
     ],
     
     "ifsc_code": [
@@ -39,34 +57,44 @@ PATTERNS = {
 SUSPICIOUS_KEYWORDS = {
     "urgency": [
         "urgent", "immediately", "now", "quick", "fast", "hurry",
-        "expire", "expiring", "limited time", "today only", "last chance"
+        "expire", "expiring", "limited time", "today only", "last chance",
+        "act now", "don't wait", "right now", "asap", "within"
     ],
     
     "threats": [
         "block", "blocked", "suspend", "suspended", "close", "closed",
         "deactivate", "deactivated", "terminate", "terminated", "freeze",
-        "legal action", "police", "arrest", "fine", "penalty"
+        "legal action", "police", "arrest", "fine", "penalty",
+        "permanently", "lose", "forfeit"
     ],
     
     "verification": [
         "verify", "verification", "confirm", "confirmation", "update",
-        "authenticate", "validation", "check", "review", "validate"
+        "authenticate", "validation", "check", "review", "validate",
+        "re-verify", "reconfirm"
     ],
     
     "payment": [
         "pay", "payment", "transfer", "send money", "refund", "credit",
-        "debit", "transaction", "amount", "rupees", "rs", "inr"
+        "debit", "transaction", "amount", "rupees", "rs", "inr", "₹",
+        "fee", "charge", "processing fee", "registration fee"
     ],
     
     "impersonation": [
         "bank", "official", "customer care", "support team", "security team",
         "government", "tax department", "income tax", "rbi", "sebi",
-        "authorized", "representative"
+        "authorized", "representative", "officer", "agent", "department"
     ],
     
     "credential_request": [
         "password", "pin", "otp", "cvv", "card number", "atm pin",
-        "account number", "login", "username", "credentials"
+        "account number", "login", "username", "credentials",
+        "debit card", "credit card", "expiry", "date of birth", "dob"
+    ],
+    
+    "link_indicators": [
+        "click", "link", "visit", "go to", "open", "access",
+        "download", "install", "tap here", "click here"
     ]
 }
 

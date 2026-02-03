@@ -83,9 +83,34 @@ class APIGateway:
                 "active_sessions": session_manager.get_active_sessions_count()
             }), 200
         
-        @self.app.route('/ingest-message', methods=['POST'])
+        @self.app.route('/ingest-message', methods=['GET', 'POST'])
         def ingest_message():
-            """Main message ingestion endpoint"""
+            """Main message ingestion endpoint - accepts GET for validation, POST for processing"""
+            if request.method == 'GET':
+                # Validate API key even on GET
+                api_key = request.headers.get('x-api-key')
+                if not validate_api_key(api_key):
+                    return jsonify(get_authentication_error()), 401
+
+                # Return endpoint info for GET requests (used by testers/validators)
+                return jsonify({
+                    "status": "ready",
+                    "endpoint": "/ingest-message",
+                    "method": "POST",
+                    "authenticated": True,
+                    "description": "Honeypot endpoint for scam message ingestion and intelligence extraction",
+                    "expected_body": {
+                        "sessionId": "string (required)",
+                        "message": {
+                            "sender": "string (required)",
+                            "text": "string (required)"
+                        },
+                        "conversationHistory": "list (optional)",
+                        "metadata": "object (optional)"
+                    }
+                }), 200
+
+            # POST - normal processing
             return self._handle_ingest_message()
         
         @self.app.route('/sessions', methods=['GET'])

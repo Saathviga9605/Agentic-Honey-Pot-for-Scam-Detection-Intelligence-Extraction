@@ -59,22 +59,30 @@ class IntelligenceReporter:
         if not intel:
             logger.warning(f"[{session_id}] No intelligence data found")
             return {
-                "entities": {},
+                "entities": {
+                    "bank_accounts": [],
+                    "ifsc_codes": [],
+                    "phone_numbers": [],
+                    "upi_ids": [],
+                    "phishing_links": []
+                },
                 "keywords": [],
-                "behavior_summary": "No intelligence collected"
+                "behavior_summary": ""
             }
         
+        # FIXED: Use phishing_links instead of urls to match extractor.py
+        entities = intel.get("entities", {})
         report = {
-            "bank_accounts": intel.get("entities", {}).get("bank_accounts", []),
-            "upi_ids": intel.get("entities", {}).get("upi_ids", []),
-            "urls": intel.get("entities", {}).get("urls", []),
-            "phone_numbers": intel.get("entities", {}).get("phone_numbers", []),
-            "ifsc_codes": intel.get("entities", {}).get("ifsc_codes", []),
+            "bank_accounts": entities.get("bank_accounts", []),
+            "ifsc_codes": entities.get("ifsc_codes", []),
+            "phone_numbers": entities.get("phone_numbers", []),
+            "upi_ids": entities.get("upi_ids", []),
+            "phishing_links": entities.get("phishing_links", []),  # FIXED: was "urls"
             "keywords": intel.get("keywords", []),
-            "behavior_summary": intel.get("behavior_summary", "No summary available")
+            "behavior_summary": intel.get("behavior_summary", "")
         }
         
-        logger.info(f"[{session_id}] Final report generated")
+        logger.info(f"[{session_id}] Final report generated with {len(entities.get('phishing_links', []))} phishing links")
         return report
     
     def send_callback(
@@ -97,10 +105,11 @@ class IntelligenceReporter:
             True if successful, False otherwise
         """
         # Extract intelligence in callback format
+        # Note: Callback might expect "urls" for backward compatibility
         extracted_intelligence = {
             "bank_accounts": report.get("bank_accounts", []),
             "upi_ids": report.get("upi_ids", []),
-            "urls": report.get("urls", []),
+            "urls": report.get("phishing_links", []),  # Map phishing_links to urls for callback
             "phone_numbers": report.get("phone_numbers", []),
             "keywords": report.get("keywords", [])
         }
@@ -150,7 +159,7 @@ class IntelligenceReporter:
             "message_count": intel.get("message_count", 0),
             "has_upi": len(entities.get("upi_ids", [])) > 0,
             "has_bank_accounts": len(entities.get("bank_accounts", [])) > 0,
-            "has_urls": len(entities.get("urls", [])) > 0
+            "has_phishing_links": len(entities.get("phishing_links", [])) > 0  # FIXED: was has_urls
         }
 
 

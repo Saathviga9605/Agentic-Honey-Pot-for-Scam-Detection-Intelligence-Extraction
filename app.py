@@ -12,8 +12,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('honeypot.log')
+        logging.StreamHandler()
     ]
 )
 
@@ -78,7 +77,6 @@ def main():
     logger.info("")
     logger.info("Authentication:")
     logger.info("  Header: x-api-key")
-    logger.info("  Valid keys: test-key-123, guvi-honeypot-key")
     logger.info("")
     logger.info("=" * 60)
     logger.info("System ready! Starting Flask server...")

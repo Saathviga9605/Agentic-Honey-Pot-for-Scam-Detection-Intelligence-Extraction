@@ -4,14 +4,18 @@ Handles API key validation for incoming requests
 """
 
 import os
+import logging
 from typing import Optional
 
-# Valid API keys (in production, use environment variables or secure vault)
-VALID_API_KEYS = {
-    "test-key-123",
-    "guvi-honeypot-key",
-    os.getenv("API_KEY", "default-dev-key")
-}
+logger = logging.getLogger(__name__)
+
+# Load API keys from environment variable (comma-separated)
+# Falls back to default keys if API_KEYS env var is not set
+_raw_keys = os.getenv("API_KEYS", "test-key-123,guvi-honeypot-key")
+VALID_API_KEYS = {key.strip() for key in _raw_keys.split(",") if key.strip()}
+
+# Print active keys on startup
+logger.info("Active API Keys: %s", ", ".join(VALID_API_KEYS))
 
 
 def validate_api_key(api_key: Optional[str]) -> bool:

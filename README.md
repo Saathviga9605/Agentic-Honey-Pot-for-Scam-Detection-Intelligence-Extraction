@@ -4,7 +4,7 @@ A production-ready backend system for defensive cybersecurity research featuring
 - **API Gateway & Orchestration** - REST endpoints with session management
 - **Scam Detection Engine** - Rule-based pattern matching with confidence scoring
 - **Intelligence Extraction** - Entity extraction and behavior analysis
-- **GUVI Callback Integration** - Automated reporting to evaluation endpoints
+- **Callback Integration** - Automated reporting to evaluation endpoints
 
 ---
 
